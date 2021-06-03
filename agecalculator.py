@@ -12,7 +12,6 @@ now = datetime.now()
 nowhour,nowminute,nowsecond = int(now.strftime("%H")),int(now.strftime("%M")),int(now.strftime("%S"))
 nowyear = int(('20'+str(nowyear)))
 yearsold = nowyear-birthyear-1
-print(birthmonth,'      ', nowmonth)
 monthsold = (yearsold*12) + ((nowmonth - birthmonth) if birthmonth <= nowmonth else (nowmonth + (13-birthmonth)))
 daysold = round(((monthsold*30) + ((nowdate - birthday) if birthday <= nowdate else (birthdate - nowdate))),0)
 hoursold = (daysold*24) + nowhour
