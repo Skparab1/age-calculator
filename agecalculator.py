@@ -3,8 +3,8 @@ from datetime import datetime
 birthdate = input('enter your birthdate in the format dd/mm/yyyy > ')
 birthmonth,birthday,birthyear = str(birthdate[:2]),str(birthdate[3:4]),str(birthdate[6:])
 if int(birthday) < 10:
-    birthday.replace('0','')
-birthmonth.replace('0','')
+    birthday = birthday.replace('0','')
+birthmonth = birthmonth.replace('0','')
 birthday,birthmonth,birthyear = int(birthday),int(birthmonth),int(birthyear)
 today = date.today()
 nowdate,nowmonth,nowyear = int(today.strftime("%d")),int(today.strftime("%m")),int(today.strftime("%y"))
